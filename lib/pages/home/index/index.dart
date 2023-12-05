@@ -66,6 +66,141 @@ class _PageViewIndexState extends State<PageViewIndex> {
             ),
           ],
         ),
+        Expanded(
+          child: SizedBox(
+            width: double.infinity,
+            child: Swiper(
+              itemCount: swipers.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  padding: const EdgeInsets.only(
+                    top: 0,
+                    left: 12,
+                    right: 12,
+                    bottom: 36,
+                  ),
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24),
+                        width: boxWidth,
+                        child: Opacity(
+                          opacity: .5,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: WcaoUtils.imageCache(swipers[index]),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 24),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Stack(children: [
+                            SizedBox(
+                              width: boxWidth + 24,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: WcaoUtils.imageCache(swipers[index]),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              left: 0,
+                              width: boxWidth,
+                              child: Container(
+                                color: Colors.black.withOpacity(.15),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 36,
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          '圆子',
+                                          style: TextStyle(
+                                            fontSize: 28,
+                                            fontWeight: FontWeight.bold,
+                                            color: WcaoTheme.outline,
+                                          ),
+                                        ),
+                                        Container(
+                                          margin: const EdgeInsets.symmetric(
+                                            vertical: 4
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Icon(
+                                                Icons.fmd_good,
+                                                color: WcaoTheme.outline,
+                                                size: WcaoTheme.fsBase,
+                                              ),
+                                              Container(
+                                                margin: const EdgeInsets.only(
+                                                  left: 4,
+                                                ),
+                                                child: Text(
+                                                  '1.1Km',
+                                                  style: TextStyle(
+                                                    fontSize: WcaoTheme.fsBase,
+                                                    color: WcaoTheme.outline,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              margin: const EdgeInsets.only(right: 8),
+                                              child: tag('180m'),
+                                            ),
+                                            Container(
+                                              margin: const EdgeInsets.only(right: 8),
+                                              child: tag('射手座'),
+                                            ),
+                                            Container(
+                                              margin: const EdgeInsets.only(right: 8),
+                                              child: tag('21岁'),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Container(
+                                      width: 64,
+                                      height: 64,
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(64),
+                                      ),
+                                      child: const Icon(
+                                        Icons.favorite,
+                                        color: Colors.redAccent,
+                                        size: 48
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
       ],
     );
   }

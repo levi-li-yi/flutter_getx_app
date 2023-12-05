@@ -10,6 +10,7 @@ import 'package:get/get.dart';
 
 import 'package:flutter_getx_app/state/token.dart';
 import 'package:flutter_getx_app/wcao/ui/theme.dart';
+import 'package:flutter_getx_app/pages/home/index/index.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -45,7 +46,9 @@ class _HomeState extends State<Home> {
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: const [],
+        children: const [
+          PageViewIndex(),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: WcaoTheme.primary,
