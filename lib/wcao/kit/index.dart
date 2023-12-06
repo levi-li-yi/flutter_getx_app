@@ -35,6 +35,7 @@ class WcaoUtils {
   }
 
   static String getRandomImage() {
-    return '$assetHost?t=${DateTime.now()}';
+    // return '$assetHost?t=${DateTime.now()}';
+    return 'http://via.placeholder.com/350x150';
   }
 }

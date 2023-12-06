@@ -10,7 +10,10 @@ import 'package:get/get.dart';
 
 import 'package:flutter_getx_app/state/token.dart';
 import 'package:flutter_getx_app/wcao/ui/theme.dart';
+
 import 'package:flutter_getx_app/pages/home/index/index.dart';
+import 'package:flutter_getx_app/pages/home/community/index.dart';
+import 'package:flutter_getx_app/pages/home/message/index.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -48,6 +51,8 @@ class _HomeState extends State<Home> {
         physics: const NeverScrollableScrollPhysics(),
         children: const [
           PageViewIndex(),
+          PageViewCommunity(),
+          PageViewMessage(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
