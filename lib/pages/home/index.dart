@@ -14,6 +14,7 @@ import 'package:flutter_getx_app/wcao/ui/theme.dart';
 import 'package:flutter_getx_app/pages/home/index/index.dart';
 import 'package:flutter_getx_app/pages/home/community/index.dart';
 import 'package:flutter_getx_app/pages/home/message/index.dart';
+import 'package:flutter_getx_app/pages/home/mine/index.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -53,6 +54,7 @@ class _HomeState extends State<Home> {
           PageViewIndex(),
           PageViewCommunity(),
           PageViewMessage(),
+          PageViewMine(),
         ],
       ),
       floatingActionButton: FloatingActionButton(

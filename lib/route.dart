@@ -9,10 +9,12 @@ import 'package:flutter_getx_app/pages/home/index.dart';
 import 'package:flutter_getx_app/pages/login/verify_code.dart';
 import 'package:flutter_getx_app/pages/login/password.dart';
 import 'package:flutter_getx_app/pages/home/message/chart/index.dart';
+import 'package:flutter_getx_app/pages/home/mine/add_tag/index.dart';
 
 List<GetPage<dynamic>> getRoutes = [
   GetPage(name: '/home', page: () => const Home()),
   GetPage(name: '/login/verify-code', page: () => const LoginVerifyCode()),
   GetPage(name: '/login/password', page: () => const LoginPassword()),
-  GetPage(name: '/message/chat', page: () => const MessageChat())
+  GetPage(name: '/message/chat', page: () => const MessageChat()),
+  GetPage(name: '/mine/add-tag', page: () => const MineAddTag())
 ];
